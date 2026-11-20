@@ -200,3 +200,5 @@ html,body{overflow-x:clip}
 
 .book{position:static!important}
 #book{scroll-margin-top:96px}
+.host{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:center}.host img{width:100%;border-radius:16px;display:block;aspect-ratio:4/5;object-fit:cover}.host p{margin-top:14px}.host .inv{margin-top:22px;padding-top:18px;border-top:1px solid rgba(239,234,226,.12);color:#b9b2a6;font-size:15px}.host .inv a{color:#E3A75E}.host .sig{margin-top:20px;font-weight:700}.host .sig span{display:block;font-weight:400;font-size:13px;color:#b9b2a6}@media(max-width:800px){.host{grid-template-columns:1fr;gap:28px}.host img{max-width:280px}}
+.hostcard{display:flex;align-items:center;gap:12px;margin-top:16px;padding:12px;border:1px solid rgba(239,234,226,.12);border-radius:12px;color:#EFEAE2;text-decoration:none}.hostcard img{width:48px;height:48px;border-radius:50%;object-fit:cover}.hostcard b{display:block;font-size:14px}.hostcard small{font-size:12px;color:#b9b2a6}
