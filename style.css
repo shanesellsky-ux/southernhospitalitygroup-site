@@ -188,3 +188,5 @@ footer .fine{text-align:left;margin-top:44px;padding-top:20px;border-top:1px sol
 .hs-ph span{flex:1 1 120px;border:1px solid var(--ln);border-radius:4px;padding:12px 14px;font-size:14px;color:var(--mu)}
 .hresults{min-height:600px}
 .hs-note{color:var(--mu)}
+
+.plan{display:block;background:#fff;border-radius:10px;overflow:hidden;padding:12px}.plan img{width:100%;height:auto;display:block}
