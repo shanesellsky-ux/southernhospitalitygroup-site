@@ -237,3 +237,6 @@ section[id]{scroll-margin-top:84px}
 hospitable-direct-mps{display:block;width:100%;max-width:100%}
 .hs-live .hs-ph,.hs-live .hs-note{display:none!important}
 .hsearch.hs-live{background:transparent;border:0;padding:0}
+.fav b a{color:var(--tx);text-decoration:underline;text-decoration-color:rgba(227,167,94,.5);text-underline-offset:3px}
+.fav b a:hover{color:var(--am2)}
+.fav b a::after{content:" \2197";font-size:.8em;color:var(--am)}
