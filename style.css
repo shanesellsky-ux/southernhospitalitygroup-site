@@ -234,3 +234,6 @@ section[id]{scroll-margin-top:84px}
 @media(max-width:860px){.top nav .dd{width:100%}.top nav .ddb{width:100%;margin-top:8px}.ddm{position:static;width:auto;max-height:none;box-shadow:none;margin-top:8px}.dd::after{display:none}}
 .top nav .ddm a{padding:9px 16px}
 @media(max-width:860px){.top nav{max-height:calc(100vh - 70px);overflow-y:auto;overscroll-behavior:contain}}
+hospitable-direct-mps{display:block;width:100%;max-width:100%}
+.hs-live .hs-ph,.hs-live .hs-note{display:none!important}
+.hsearch.hs-live{background:transparent;border:0;padding:0}
