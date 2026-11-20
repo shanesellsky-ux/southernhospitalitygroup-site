@@ -4,7 +4,7 @@
 TITLE = {
  'bootleggers': "Bootlegger's Retreat: Red River Gorge Cabin with Hot Tub & Game Room",
  'neo': 'NEO: Modern Red River Gorge Cabin with Private Hot Tub',
- 'trinity': 'Trinity A-Frame: Red River Gorge Cabin with Hot Tub, Sleeps 6',
+ 'trinity': 'Trinity A-Frame: Red River Gorge Cabin with Hot Tub, Sleeps 5',
  'bourbon-street': 'Bourbon Street: Frankfort Mansion for 14 Near Buffalo Trace',
  'woodleigh': 'The Woodleigh: Versailles, KY Home Near Keeneland, Sleeps 8',
  'bourbon-loft': 'Bourbon Trail Loft: Downtown Frankfort Loft Near Buffalo Trace',
@@ -15,7 +15,7 @@ TITLE = {
 DESC = {
  'bootleggers': '4-bedroom Red River Gorge cabin near Slade with a private hot tub, game room and arcade, fire pit and EV charger. Sleeps 8, pets welcome. Book direct.',
  'neo': 'Modern 2-bedroom cabin 10 minutes from Slade with a private hot tub, wall of windows, fire pit and free EV charger. Sleeps 5, dogs welcome. Book direct.',
- 'trinity': '3-bedroom A-frame near Slade and Natural Bridge with a sunken hot tub, shuffleboard, arcade and fire pit. Sleeps 6, pets welcome. Book direct.',
+ 'trinity': '3-bedroom A-frame near Slade and Natural Bridge with a sunken hot tub, shuffleboard, arcade and fire pit. Sleeps 5, pets welcome. Book direct.',
  'bourbon-street': '1904 mansion in downtown Frankfort for groups up to 14: 7 bedrooms, speakeasy bar, billiards, theater. About 5 minutes to Buffalo Trace. Book direct.',
  'woodleigh': '1903 home in downtown Versailles, KY with 4 bedrooms and a covered patio with fire pit, about 15 minutes to Keeneland. Sleeps 8. Book direct.',
  'bourbon-loft': "Two-story brick loft on St. Clair Street in downtown Frankfort, 1.6 miles from Buffalo Trace. Two queen beds, sleeps 4. Walk to dinner. Book direct.",
@@ -69,7 +69,7 @@ G = {
          ('Nada Tunnel', 'The one-lane tunnel on the scenic drive into the Gorge.')],
    best=['Hikers and climbers who want a hot tub at the end of the day', 'Couples and honeymooners (NEO)', 'Families (Trinity A-Frame and Bootlegger\'s Retreat)', 'Dog owners: all three cabins are pet friendly', 'EV drivers: free Level 2 charger at every cabin'],
    faq=[('Where should a group stay when visiting the Red River Gorge?', "Bootlegger's Retreat sleeps 8 across 4 bedrooms and has a game room for downtime. For a bigger group, book all three of our cabins: they're in the same hollow between Stanton and Slade and sleep 19 together."),
-        ('Are there family cabins near Natural Bridge State Resort Park?', "Yes. All three cabins are about 10 minutes from Slade, with Natural Bridge a short drive beyond. Trinity A-Frame (3 bedrooms, sleeps 6) and Bootlegger's Retreat (4 bedrooms, sleeps 8, with a gated kids' loft) work well for families."),
+        ('Are there family cabins near Natural Bridge State Resort Park?', "Yes. All three cabins are about 10 minutes from Slade, with Natural Bridge a short drive beyond. Trinity A-Frame (3 bedrooms, sleeps 5) and Bootlegger's Retreat (4 bedrooms, sleeps 8, with a gated kids' loft) work well for families."),
         ('Do the Red River Gorge cabins have hot tubs?', 'Yes. Every cabin has its own private hot tub on the deck. Our Herrington Lake house has one too.'),
         ('Can I bring my dog?', 'Yes. All three Gorge cabins welcome up to 2 pets for $50 per pet per stay.'),
         ('Do I need 4WD to reach the cabins?', 'The cabins sit up a gravel road in Birch Hollow. AWD or 4WD is recommended in good weather and required in ice or snow.'),

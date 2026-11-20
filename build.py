@@ -38,7 +38,7 @@ P = {
         ("Claire R.","This was a great place to stay for a quick honeymoon getaway! The cabin was beautiful and clean. I also really appreciated being able to bring my puppy so we could have a full family getaway!"),
         ("Myra S.","Shane's cabin was excellent! The space is beautiful and the cabin is peacefully nestled in the woods. Everything was easy to find and use. The kitchen was well stocked with seasonings and cooking needs. The EV charger worked excellently.")]),
  'trinity': dict(name='Trinity A-Frame', market='red-river-gorge', town='Rosslyn · Red River Gorge',
-   tag='Sunken hot tub · shuffleboard · sleeps 6', br=3, ba=2, guests=6, beds=2, pets=True, n=16,
+   tag='Sunken hot tub · shuffleboard · sleeps 5', br=3, ba=2, guests=5, beds=2, pets=True, n=16,
    book=BASE+'661715636182846734/10-minutes-from-slade-hottub-arcade-ev-charger',
    lede='A Scandinavian-inspired A-frame with soaring wood ceilings, a wall of glass and a sunken hot tub on the deck. Light-up shuffleboard and an arcade inside, a fire pit ring with red Adirondacks outside, and hidden trails to wander.',
    feats=['Sunken hot tub','Light-up shuffleboard & arcade','Fire pit with Adirondack chairs','3 bedrooms, 2 baths','Free Level 2 EV charger','Pet friendly'],
