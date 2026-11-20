@@ -197,3 +197,5 @@ footer .fine{text-align:left;margin-top:44px;padding-top:20px;border-top:1px sol
 html,body{overflow-x:clip}
 .mbar{display:none}
 @media(max-width:960px){.mbar{display:flex;position:fixed;left:10px;right:10px;bottom:10px;z-index:50;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 16px;background:#1C211D;border:1px solid rgba(239,234,226,.15);border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.5);color:#EFEAE2;text-decoration:none}.mbar b{display:block;font-size:15px}.mbar small{font-size:12px;color:#b9b2a6}.mbar em{font-style:normal;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;background:#E3A75E;color:#121512;padding:12px 16px;border-radius:10px;white-space:nowrap}body:has(.mbar) footer{padding-bottom:90px}}
+
+.book{position:static!important}
