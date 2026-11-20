@@ -220,3 +220,4 @@ h3.todoh{font-size:20px;margin-bottom:20px}
 .guides a{border:1px solid var(--ln);padding:8px 14px;border-radius:999px;text-decoration:none;color:var(--tx)}
 .guides a:hover{border-color:var(--am);color:var(--am2)}
 img{height:auto}
+section[id]{scroll-margin-top:84px}
