@@ -202,3 +202,21 @@ html,body{overflow-x:clip}
 #book{scroll-margin-top:96px}
 .host{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:center}.host img{width:100%;border-radius:16px;display:block;aspect-ratio:4/5;object-fit:cover}.host p{margin-top:14px}.host .inv{margin-top:22px;padding-top:18px;border-top:1px solid rgba(239,234,226,.12);color:#b9b2a6;font-size:15px}.host .inv a{color:#E3A75E}.host .sig{margin-top:20px;font-weight:700}.host .sig span{display:block;font-weight:400;font-size:13px;color:#b9b2a6}@media(max-width:800px){.host{grid-template-columns:1fr;gap:28px}.host img{max-width:280px}}
 .hostcard{display:flex;align-items:center;gap:12px;margin-top:16px;padding:12px;border:1px solid rgba(239,234,226,.12);border-radius:12px;color:#EFEAE2;text-decoration:none}.hostcard img{width:48px;height:48px;border-radius:50%;object-fit:cover}.hostcard b{display:block;font-size:14px}.hostcard small{font-size:12px;color:#b9b2a6}
+.pmain h2.ph2{font-size:clamp(22px,2.4vw,30px);margin:44px 0 18px}
+.pmain>.lead+h2.ph2{margin-top:34px}
+.glance{display:grid;grid-template-columns:max-content 1fr;gap:10px 22px;margin:0;padding:20px 22px;background:var(--sf);border:1px solid var(--ln);border-radius:6px;font-size:15px}
+.glance dt{color:var(--am);font-weight:600;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;padding-top:2px}
+.glance dd{margin:0;color:#DAD4CA}
+@media(max-width:620px){.glance{grid-template-columns:1fr;gap:2px}.glance dd{margin-bottom:10px}}
+.callout{margin-top:24px;padding:16px 20px;border-left:3px solid var(--am);background:var(--sf);color:#DAD4CA;font-size:16px;border-radius:0 6px 6px 0}
+h3.todoh{font-size:20px;margin-bottom:20px}
+.cmp{overflow-x:auto;margin:0 0 36px;border:1px solid var(--ln);border-radius:6px}
+.cmp table{width:100%;border-collapse:collapse;font-size:15px;min-width:720px}
+.cmp th{text-align:left;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--am);padding:12px 14px;background:var(--sf);font-weight:600}
+.cmp td{padding:12px 14px;border-top:1px solid var(--ln);color:#DAD4CA;vertical-align:top}
+.cmp td a{font-weight:700;text-decoration:none}
+.guides{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:34px;font-size:14px}
+.guides span{color:var(--mu);margin-right:4px}
+.guides a{border:1px solid var(--ln);padding:8px 14px;border-radius:999px;text-decoration:none;color:var(--tx)}
+.guides a:hover{border-color:var(--am);color:var(--am2)}
+img{height:auto}
