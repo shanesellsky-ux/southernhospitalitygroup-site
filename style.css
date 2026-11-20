@@ -190,3 +190,4 @@ footer .fine{text-align:left;margin-top:44px;padding-top:20px;border-top:1px sol
 .hs-note{color:var(--mu)}
 
 .plan{display:block;background:#fff;border-radius:10px;overflow:hidden;padding:12px}.plan img{width:100%;height:auto;display:block}
+.plans{display:grid;gap:16px}.plans figure{margin:0}.plans figcaption{font-size:13px;color:#b9b2a6;margin-top:6px;letter-spacing:.04em;text-transform:uppercase}
