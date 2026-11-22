@@ -121,7 +121,7 @@ BOOKMENU = ('<div class="dd"><button class="btn ddb" type="button" aria-haspopup
   + '<a class="ddall" href="search.html">Search all homes by date &rarr;</a></div></div>')
 
 def head(title, desc, depth='', ld=None):
-    return f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    return f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="p:domain_verify" content="579e0f4fb4aa7a1666019bee12486320"/>
 <title>{E(title)}</title><meta name="description" content="{E(desc)}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -427,7 +427,7 @@ def stub(path, target, title):
     url = SITE + target
     d = os.path.join(OUT, path.strip('/'))
     os.makedirs(d, exist_ok=True)
-    open(os.path.join(d, 'index.html'), 'w').write(f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>{E(title)} | Southern Hospitality Group</title>
+    open(os.path.join(d, 'index.html'), 'w').write(f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="p:domain_verify" content="579e0f4fb4aa7a1666019bee12486320"/><title>{E(title)} | Southern Hospitality Group</title>
 <link rel="canonical" href="{url}"><meta http-equiv="refresh" content="0; url={target}"><meta name="robots" content="noindex,follow">
 <script>location.replace("{target}"+location.hash)</script></head><body><p>This page has moved: <a href="{target}">{E(title)}</a>.</p></body></html>''')
 OLD = {'about': '/#host', 'contact': '/faq', 'sitemap': '/', 'properties': '/#homes', 'search-results': '/search', 'blog': '/'}
