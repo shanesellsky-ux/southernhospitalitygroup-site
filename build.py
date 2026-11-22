@@ -2,6 +2,7 @@ import json, html, os
 from faqdata import SITE_FAQ, PROP_FAQ, LOC, PHONE
 from urllib.parse import quote_plus
 from localdata import LOCAL, SITES, TOWN, QUERY
+from articles import ARTICLES
 from seodata import TITLE, DESC, BEST, HOTTUB, HL, G, BT, WHERE, SITE_DIRECT_FAQ, BOOK_Q
 SITE = 'https://www.southernhospitalitygroup.co'
 import hashlib
@@ -128,7 +129,7 @@ def head(title, desc, depth='', ld=None):
 <link rel="stylesheet" href="style.css?v={CSSV}">{"".join('<script type="application/ld+json">'+json.dumps(x)+'</script>' for x in (ld or []))}</head><body>
 <header class="top"><a class="brand" href="index.html"><span>SOUTHERN HOSPITALITY</span><small>GROUP · KENTUCKY</small></a>
 <button class="menu" aria-label="Menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
-<nav><a href="red-river-gorge.html">Red River Gorge</a><a href="bourbon-trail.html">Bourbon Trail</a><a href="herrington-lake.html">Herrington Lake</a><a href="faq.html">FAQ</a><a href="index.html#host">About us</a>{BOOKMENU}</nav></header>'''
+<nav><a href="red-river-gorge.html">Red River Gorge</a><a href="bourbon-trail.html">Bourbon Trail</a><a href="herrington-lake.html">Herrington Lake</a><a href="trip-guides.html">Trip guides</a><a href="faq.html">FAQ</a><a href="index.html#host">About us</a>{BOOKMENU}</nav></header>'''
 
 FOOT = '''<section class="perk-band"><div class="wrap"><div><p class="kick">BOOK DIRECT PERK</p><h2>Two extra hours of Kentucky.</h2>
 <p>Book on our site and get a complimentary early check-in or late checkout, up to 2 hours, when available. Same homes, same hosts, always a lower price than Airbnb or Vrbo.</p></div>
@@ -362,6 +363,35 @@ open(f'{OUT}/terms.html','w').write(termspage())
 open(f'{OUT}/index.html','w').write(home())
 for g in G: open(f'{OUT}/{g}.html','w').write(guide(g))
 for k in P: open(f'{OUT}/{k}.html','w').write(prop(k))
+
+# ---------- ARTICLES (trip guides)
+def article(a):
+    url = f"{SITE}/{a['slug']}"
+    ld = {"@context":"https://schema.org","@type":"Article","headline":a['h1'],"description":a['desc'],"datePublished":a['date'],"dateModified":a['date'],"image":f"img/{a['hero']}","author":{"@type":"Organization","name":"Southern Hospitality Group"},"publisher":{"@type":"Organization","name":"Southern Hospitality Group"},"mainEntityOfPage":url}
+    h = head(a['title'], a['desc'], ld=[ld, crumbs_ld([("Home",SITE+"/"),("Trip guides",SITE+"/trip-guides"),(a['h1'],url)])])
+    h += f'''<section class="hero short"><img src="img/{a['hero']}" alt="{E(a['h1'])}"><div class="shade"></div><div class="wrap hc"><p class="crumb"><a href="index.html">Home</a> / <a href="trip-guides.html">Trip guides</a></p>
+<p class="kick">{E(a['kicker'].upper())}</p><h1>{E(a['h1'])}</h1><p class="sub">{E(a['sub'])}</p></div></section>
+<section class="sec"><div class="wrap" style="max-width:820px">'''
+    for i,(hd, paras) in enumerate(a['body']):
+        h += f'<h2{" style=margin-top:40px" if i else ""}>{E(hd)}</h2>' + ''.join(f'<p class="lead" style="margin-top:14px">{E(t)}</p>' for t in paras)
+    h += '</div></section>'
+    if a.get('homes'):
+        h += '<section class="sec alt"><div class="wrap"><p class="kick">WHERE TO STAY</p><h2>Our homes for this trip</h2><div class="grid">' + ''.join(card(k) for k in a['homes']) + '</div></div></section>'
+    h += FOOT
+    return h
+
+def guides_index():
+    t = 'Kentucky Trip Guides | Southern Hospitality Group'
+    d = 'Trip ideas and local tips for Red River Gorge, the Kentucky Bourbon Trail, horse country and Herrington Lake, from the hosts at Southern Hospitality Group.'
+    h = head(t, d, ld=[crumbs_ld([("Home",SITE+"/"),("Trip guides",SITE+"/trip-guides")])])
+    h += '<section class="sec"><div class="wrap"><p class="kick">TRIP GUIDES</p><h1>Kentucky trip ideas from your hosts</h1><div class="grid" style="margin-top:28px">'
+    for a in ARTICLES:
+        h += f'<a class="card" href="{a["slug"]}.html"><div class="ph"><img loading="lazy" src="img/{a["hero"]}" alt="{E(a["h1"])}"></div><div class="cb"><p class="town">{E(a["kicker"])}</p><h3>{E(a["h1"])}</h3><p class="tag">{E(a["sub"])}</p><span class="go">Read the guide →</span></div></a>'
+    h += '</div></div></section>' + FOOT
+    return h
+
+for a in ARTICLES: open(f'{OUT}/{a["slug"]}.html','w').write(article(a))
+open(f'{OUT}/trip-guides.html','w').write(guides_index())
 print('ok', os.listdir(OUT))
 
 # ---- SEO post-processing: clean URLs, canonical, Open Graph, sitemap, robots ----
@@ -382,7 +412,8 @@ for fp in sorted(f for f in glob.glob(f'{OUT}/*.html') if not os.path.basename(f
     h = re.sub(r'href="([a-z0-9-]+)\.html(#[^"]*)?"', lambda m: f'href="/{m.group(1)}{m.group(2) or ""}"', h)
     title = re.search(r'<title>(.*?)</title>', h).group(1)
     desc = re.search(r'<meta name="description" content="(.*?)">', h).group(1)
-    img = (f'img/{slug}/00.jpg' if slug in P else (f"img/{G[slug]['hero']}" if slug in G else 'img/bootleggers/00.jpg'))
+    _A = {a['slug']:a for a in ARTICLES}
+    img = (f"img/{_A[slug]['hero']}" if slug in _A else f'img/{slug}/00.jpg' if slug in P else (f"img/{G[slug]['hero']}" if slug in G else 'img/bootleggers/00.jpg'))
     tags = (f'<link rel="canonical" href="{url}">'
             f'<meta property="og:type" content="website"><meta property="og:site_name" content="Southern Hospitality Group">'
             f'<meta property="og:title" content="{title}"><meta property="og:description" content="{desc}">'

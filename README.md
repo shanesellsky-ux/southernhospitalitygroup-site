@@ -14,6 +14,8 @@ Commit changes to build.py / *data.py back to this `source` branch too.
 ## Files
 - build.py: page templates, nav, schema, redirects, sitemap. Hand-edited CSS is out/style.css (main branch).
 - seodata.py: titles, descriptions, destination/guide pages. faqdata.py: FAQs. localdata.py: local favorites + their links (SITES).
+- articles.py: trip-guide articles (newest first) -> /<slug> pages + /trip-guides index.
+- pins/: make.py + pins.json generate 1000x1500 Pinterest pin images into out/pins/ (served at /pins/).
 - src/: original photos per home; out/img/ holds the web-sized copies.
 
 ## Rules
