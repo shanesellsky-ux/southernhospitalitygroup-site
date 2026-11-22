@@ -138,7 +138,7 @@ FOOT = '''<section class="perk-band"><div class="wrap"><div><p class="kick">BOOK
 <p>Locally hosted short-term rentals in the Red River Gorge, on the Bourbon Trail and on Herrington Lake. Hosted by Shane and the Southern Hospitality Group team.</p></div>
 <div><h4>Stays</h4><a href="red-river-gorge.html">Red River Gorge</a><a href="bourbon-trail.html">Bourbon Trail</a><a href="herrington-lake.html">Herrington Lake</a></div>
 <div><h4>Trip guides</h4><a href="large-group-rentals.html">Large group rentals</a><a href="buffalo-trace-lodging.html">Stays near Buffalo Trace</a><a href="red-river-gorge.html">Red River Gorge cabins</a><a href="bourbon-trail.html">Frankfort &amp; Bourbon Trail</a></div>
-<div><h4>Contact</h4><a href="tel:+18592291524">Call or text 859-229-1524</a><a href="faq.html">FAQ</a><a href="terms.html">Terms of Stay</a><a href="https://www.instagram.com/southern_hospitalityky/">Instagram</a><a href="https://www.facebook.com/people/Southern-Hospitality-Group/100076536140013/">Facebook</a></div></div>
+<div><h4>Contact</h4><a href="tel:+18592291524">Call or text 859-229-1524</a><a href="faq.html">FAQ</a><a href="terms.html">Terms of Stay</a><a href="https://www.instagram.com/southern_hospitalityky/">Instagram</a><a href="https://www.facebook.com/people/Southern-Hospitality-Group/100076536140013/">Facebook</a><a href="https://www.pinterest.com/southernhospitalityky/">Pinterest</a></div></div>
 <div class="wrap fine">© 2026 Southern Hospitality Group · Red River Gorge cabin photography by Kylie Whiseman, PoppyCoast Photography</div></footer>
 <div class="lb" id="lb" onclick="if(event.target===this)lbClose()"><button class="lbx" onclick="lbClose()" aria-label="Close">✕</button><button class="lbp" onclick="lbGo(-1)" aria-label="Previous">‹</button><img id="lbi" alt=""><button class="lbn" onclick="lbGo(1)" aria-label="Next">›</button><p id="lbc"></p></div>
 <script>let G=[],gi=0;function lbOpen(i){G=[...document.querySelectorAll('[data-lb]')];gi=i;lbShow();document.getElementById('lb').classList.add('on')}
@@ -173,7 +173,7 @@ def home():
            "address":{"@type":"PostalAddress","addressRegion":"KY","addressCountry":"US"},
            "founder":{"@type":"Person","name":"Shane O'Donley"},
            "contactPoint":{"@type":"ContactPoint","telephone":"+1-859-229-1524","contactType":"reservations","areaServed":"US"},
-           "sameAs":["https://www.instagram.com/southern_hospitalityky/","https://www.facebook.com/profile.php?id=100076536140013"]}
+           "sameAs":["https://www.instagram.com/southern_hospitalityky/","https://www.facebook.com/profile.php?id=100076536140013","https://www.pinterest.com/southernhospitalityky/"]}
     web = {"@context":"https://schema.org","@type":"WebSite","@id":SITE+"/#website","name":"Southern Hospitality Group","url":SITE+"/","publisher":{"@id":SITE+"/#org"}}
     hfaq = SITE_DIRECT_FAQ + SITE_FAQ[:3]
     h = head('Kentucky Vacation Rentals | Red River Gorge, Bourbon Trail & Lake | Book Direct', 'Book direct with local hosts: hot tub cabins in the Red River Gorge, a 1904 mansion and lofts in Frankfort near Buffalo Trace, and a Herrington Lake house.', ld=[org, web, faq_ld(hfaq)])
