@@ -243,7 +243,7 @@ def guide(slug):
         h += '</tbody></table></div>'
     h += '<div class="grid">' + ''.join(card(k) for k in g['homes']) + '</div></div></section>'
     h += f'<section class="sec"><div class="wrap two"><div><p class="kick">BEST FOR</p><h2>{"Who these homes suit" if len(g["homes"])>1 else "Who it suits"}</h2><ul class="feats one">' + ''.join(f'<li>{E(b)}</li>' for b in g['best']) + '</ul>'
-    h += '<p style="margin-top:26px"><a class="btn big" href="#ghomes">Check dates &amp; book direct</a></p></div>'
+    h += ('<p style="margin-top:26px"><a class="btn big" href="' + g['homes'][0] + '.html#book">Check dates &amp; book direct</a></p></div>') if len(g['homes'])==1 else '<p style="margin-top:26px"><a class="btn big" href="#ghomes">Pick a home &amp; check dates</a></p></div>'
     h += '<div><h3 class="todoh">Questions travelers ask</h3>' + faq_html(g['faq']) + '</div></div></section>'
     if slug in M:
         h += '<section class="sec alt"><div class="wrap"><p class="kick">GUESTS SAY</p><div class="qg">'
