@@ -4,7 +4,7 @@ CANCEL = ('What is the cancellation policy?',
 
 SITE_FAQ = [
  ('Is check-in contactless?', 'Yes. Every home has self check-in with a keypad or smart lock. You get a personal door code and arrival directions before your stay, so there is no key pickup and no waiting on anyone.'),
- ('What time is check-in and checkout?', 'Check-in is 3:00 pm at every home. Checkout is 10:00 am, except The Woodleigh, which checks out at 11:00 am.'),
+ ('What time is check-in and checkout?', 'Check-in is 3:00 pm at every home except the Trinity A-Frame, which checks in at 4:00 pm. Checkout is 10:00 am, except The Woodleigh, which checks out at 11:00 am.'),
  ('Do you have a long list of checkout chores?', 'No. Checkout is simple: lock the doors, turn off the lights, log out of any personal streaming accounts and, at the cabins and lake house, drop the trash in the bins by the driveway. You do not need to strip beds or do laundry. We take care of that.'),
  ('Can we check in early or arrive late?', "Late arrivals are no problem. Check-in is self-serve, so you can roll in whenever your trip allows, even late at night. Just give us a rough arrival time. Hoping to get in early? Ask. If the home is ready, we're happy to let you in, and direct bookings get up to two extra hours when available."),
  ('Can we check out late?', "Just ask. If no one is arriving that day, a later checkout is usually easy to arrange, and direct bookings get up to two extra hours when available."),
@@ -43,7 +43,7 @@ PROP_FAQ = {
   ('Is firewood provided?', 'The fire pit is wood-burning, and there’s some firewood shared between NEO and the Trinity A-Frame to get you started. Need more? The firewood shed where the blacktop ends sells bundles by cash box or Venmo.'),
  ],
  'trinity': [
-  ('How does check-in work?', 'Self check-in with a smart lock. Check-in is 3:00 pm.'),
+  ('How does check-in work?', 'Self check-in with a smart lock. Check-in is 4:00 pm.'),
   ('What do I need to do at checkout?', 'Grab your things, lock the doors and drop trash in the bear box by the driveway. Starting the dishwasher is appreciated but optional. Checkout is 10:00 am.'),
   ('Is the hot tub private?', 'Yes. The sunken hot tub on the covered back deck is private.'),
   ('Can I bring my dog?', 'Yes. Up to 2 pets for $50 per pet per stay. Pets must be crated if left alone inside.'),
